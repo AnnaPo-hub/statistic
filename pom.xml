@@ -21,11 +21,20 @@
             <version>5.6.0</version>
             <scope>test</scope>
         </dependency>
-
-
+        
     </dependencies>
     <build>
         <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-checkstyle-plugin</artifactId>
+                <version>3.0.0</version>
+                <configuration>
+                    <configLocation>checkstyle.xml</configLocation>
+                </configuration>
+            </plugin>
+
+
             <plugin>
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>2.22.2</version>
@@ -86,6 +95,7 @@
 
             </plugin>
         </plugins>
+
     </build>
 
 
